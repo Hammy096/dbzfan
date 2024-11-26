@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modern Character Display</title>
+        <!-- Tailwind CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    
+<body class="bg-[#0A3981] text-[#D4EBF8] min-h-screen flex flex-col items-center p-5">
+    <header class="mb-8 text-center">
+        <h1 class="text-4xl font-bold mb-3">✨ Random Characters ✨</h1>
+    </header>
+    <main class="w-full max-w-5xl">
+        <div class="flex justify-center space-x-4 mb-8">
+            <button id="randomButton" class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-[#D4EBF8] font-bold py-3 px-6 rounded-full shadow-lg transition-all">
+                Show Random Characters
+            </button>
+            <button id="randomDPButton" class="bg-gradient-to-r from-pink-400 to-purple-500 hover:from-pink-500 hover:to-purple-600 text-[#D4EBF8] font-bold py-3 px-6 rounded-full shadow-lg transition-all">
+                Show Random Characters (Max DP 15)
+            </button>
+            <!-- Reset Button -->
+            <button id="resetButton" class="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-[#D4EBF8] font-bold py-3 px-6 rounded-full shadow-lg transition-all">
+                Reset
+            </button>
+        </div>
+        
+        <ul id="characterList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Characters will be displayed here -->
+        </ul>
+    </main>
+    <footer class="mt-10 text-sm">
+        <p>&copy; 2024 Created By Hammy.</p>
+        <a href="quicknote.html" target="_blank" class="text-[#FF7E5F] font-bold hover:text-[#FD3A69] transition-all">
+            Quick Note
+        </a>
+    </footer>
+    
+    
+</body>
+</html>
