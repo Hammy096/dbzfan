@@ -1,13 +1,15 @@
 /* General Styling */
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    background-color: #0A3981; /* Updated background color */
-    color: #D4EBF8; /* Updated text color */
+    background-color: #0A3981; /* Background color */
+    color: #D4EBF8; /* Text color */
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures body spans full viewport height */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height */
     overflow-x: hidden;
 }
 
@@ -16,37 +18,50 @@ h1 {
     text-transform: uppercase;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: #D4EBF8; /* Updated text color */
+    color: #D4EBF8; /* Text color */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-button {
-    padding: 15px 30px;
-    font-size: 18px;
+/* Button Styling */
+.btn {
+    padding: 10px 20px; /* Reduced padding for smaller buttons */
+    font-size: 16px; /* Adjust font size */
     font-weight: bold;
     cursor: pointer;
-    background: linear-gradient(90deg, #FF7E5F, #FD3A69); /* Modern gradient for buttons */
-    color: #D4EBF8; /* Updated text color */
+    background: linear-gradient(90deg, #FF7E5F, #FD3A69); /* Button gradient */
+    color: #D4EBF8; /* Text color */
     border: none;
-    border-radius: 30px;
+    border-radius: 10px; /* Slightly rounded */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    margin: 10px;
+    margin: 10px 0; /* Vertical spacing for mobile layout */
 }
 
-button:hover {
+.btn:hover {
     background: linear-gradient(90deg, #FD3A69, #FF7E5F); /* Reverse gradient on hover */
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Header and Main Centering */
-header, main {
+/* Button Container Layout */
+.button-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack buttons vertically on mobile */
     align-items: center;
-    text-align: center;
-    flex: 1; /* Allows main content to grow and push footer to the bottom */
+    width: 100%;
+}
+
+/* Responsive Styling for Buttons */
+@media (min-width: 640px) {
+    .button-container {
+        flex-direction: row; /* Align buttons horizontally on larger screens */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .btn {
+        margin: 0; /* Remove vertical spacing in horizontal layout */
+    }
 }
 
 /* Character List Grid */
@@ -59,10 +74,10 @@ header, main {
     max-width: 800px;
     padding: 0;
     list-style: none;
-    justify-content: center; /* Horizontally centers the grid */
+    justify-content: center; /* Center the grid */
 }
 
-/* Keyframes for fade-in animation */
+/* Keyframes for Fade-in Animation */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -97,36 +112,36 @@ header, main {
     height: 80px;
     border-radius: 50%;
     margin-bottom: 10px;
-    border: 3px solid #D4EBF8; /* Updated border color */
+    border: 3px solid #D4EBF8; /* Image border */
 }
 
 #characterList span {
     font-size: 18px;
     font-weight: bold;
-    color: #D4EBF8; /* Updated text color */
+    color: #D4EBF8; /* Text color */
 }
 
 /* Footer Styling */
 footer {
     text-align: center;
-    background: #0A3981; /* Updated background color */
-    color: #D4EBF8; /* Updated text color */
+    background: #0A3981; /* Background color */
+    color: #D4EBF8; /* Text color */
     padding: 15px 0;
     font-size: 14px;
     width: 100%;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: auto; /* Pushes footer to the bottom */
+    margin-top: auto; /* Push footer to bottom */
 }
 
 footer a {
-    color: #FF7E5F; /* Updated link color */
+    color: #FF7E5F; /* Link color */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #FD3A69; /* Updated hover link color */
+    color: #FD3A69; /* Hover color */
 }
 
 footer p {
@@ -139,10 +154,4 @@ footer p {
 footer p span {
     font-size: 12px;
     color: rgba(212, 235, 248, 0.8);
-}
-
-
-.hidden {
-    opacity: 0;
-    transition: opacity 0.5s ease;
 }
