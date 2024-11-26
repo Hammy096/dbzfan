@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quick Note</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom CSS for consistent styling -->
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* Matching background styling */
+        /* Additional styling specific to quicknote.html */
         body {
-            background-color: #0A3981; /* Same background color */
-            color: #E0E0E0; /* Slightly darker white for improved readability */
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', Arial, sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -35,9 +33,9 @@
 
         /* Header text styling */
         h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #FFFFFF; /* Pure white for the header text */
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for better visibility */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
 
         /* Footer link styling */
@@ -64,10 +62,8 @@
             rights belong to <strong>BANDAI NAMCO Entertainment</strong>.
             <a href="https://en.bandainamcoent.eu/dragon-ball/dragon-ball-sparking-zero" target="_blank" rel="noopener noreferrer" style="color: #FF7E5F;">Find out more!</a>
         </p>
-        
-        
     </main>
-    <footer class="mt-10 text-sm">
+    <footer class="mt-10 text-sm w-full text-center">
         <a href="index.html">Back to Home</a>
     </footer>
 </body>
