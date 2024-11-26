@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Modern Character Display</title>
         <!-- Tailwind CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css" rel="stylesheet">
         <!-- Custom CSS -->
         <link rel="stylesheet" href="style.css">
         <script src="script.js" defer></script>
@@ -20,26 +20,40 @@
             <button id="randomButton" class="btn">
                 Show Random Characters
             </button>
-            <button id="randomDPButton" class="btn">
+            <button id="randomDPButton" class="btn bg-blue-600 hover:bg-blue-500">
                 Show Random Characters (Max DP 15)
             </button>
-            <button id="resetButton" class="btn">
+            <button id="resetButton" class="btn bg-red-500 hover:bg-red-400">
                 Reset
             </button>
         </div>
         
-        
-        <ul id="characterList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <!-- Characters will be displayed here -->
-        </ul>
+        <!-- Table to display characters -->
+        <table id="characterTable" class="min-w-full bg-white rounded-md shadow-md text-black">
+            <thead>
+                <tr>
+                    <th class="p-4 border-b font-bold">Image</th>
+                    <th class="p-4 border-b font-bold">Name</th>
+                    <th class="p-4 border-b font-bold">DP</th>
+                </tr>
+            </thead>
+            <tbody id="characterTableBody">
+                <!-- Characters will be displayed here -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" class="p-4 font-bold text-right border-t border-gray-300">Total DP:</td>
+                    <td id="totalDPCell" class="p-4 font-bold text-center border-t border-gray-300">0</td>
+                </tr>
+            </tfoot>
+        </table>
     </main>
-    <footer class="mt-10 text-sm">
+    
+    <footer class="fixed bottom-0 left-0 w-full p-3 text-center text-sm bg-[#0A3981]">
         <p>&copy; 2024 Created By Hammy.</p>
-        <a href="quicknote.html" target="_blank" class="text-[#FF7E5F] font-bold hover:text-[#FD3A69] transition-all">
+        <a href="quicknote.html" class="text-[#FF7E5F] font-bold hover:text-[#FD3A69] transition-all">
             Quick Note
         </a>
     </footer>
-    
-    
 </body>
 </html>
