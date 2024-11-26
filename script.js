@@ -906,6 +906,7 @@ const characters = [
     }
 ];
 
+
 // Event listeners
 document.getElementById('randomButton').addEventListener('click', () => {
     displayRandomCharacters(characters);
