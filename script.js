@@ -918,17 +918,6 @@ document.getElementById('randomDPButton').addEventListener('click', () => {
 
 document.getElementById('resetButton').addEventListener('click', resetCharacters);
 
-// Event listeners
-document.getElementById('randomButton').addEventListener('click', () => {
-    displayRandomCharacters(characters);
-});
-
-document.getElementById('randomDPButton').addEventListener('click', () => {
-    displayRandomCharactersWithDP(characters, 15);
-});
-
-document.getElementById('resetButton').addEventListener('click', resetCharacters);
-
 // Display random characters
 function displayRandomCharacters(characters) {
     const characterTableBody = document.getElementById('characterTableBody');
@@ -957,7 +946,7 @@ function displayRandomCharactersWithDP(characters, maxDP) {
     let iterations = 0;
 
     // Shuffle the characters array for randomness
-    const shuffledCharacters = [.characters].sort(() => 0.5 - Math.random());
+    const shuffledCharacters = [...characters].sort(() => 0.5 - Math.random());
 
     // Iterate over the shuffled characters to select those within the DP limit
     for (let i = 0; i < shuffledCharacters.length && totalDP < maxDP && iterations < maxIterations; i++) {
@@ -992,7 +981,7 @@ function resetCharacters() {
 
 // Helper function: Get unique random items
 function getUniqueRandomItems(array, count) {
-    const shuffled = [.array].sort(() => 0.5 - Math.random());
+    const shuffled = [...array].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
 }
 
