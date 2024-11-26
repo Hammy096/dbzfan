@@ -142,7 +142,7 @@ const characters = [
     {
         "name": "Cell Jr.",
         "dp": 3,
-        "Image": "img/Cell_Jrpng"
+        "Image": "img/Cell_Jr.png"
     },
     {
         "name": "Cell Perfect Form",
@@ -707,7 +707,7 @@ const characters = [
     {
         "name": "Super Garlic Jr.",
         "dp": 4,
-        "Image": "img/Super_Garlic_Jrpng"
+        "Image": "img/Super_Garlic_Jr.png"
     },
     {
         "name": "Super Gogeta (Z)",
