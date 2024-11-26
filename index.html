@@ -16,18 +16,18 @@
         <h1 class="text-4xl font-bold mb-3">✨ Random Characters ✨</h1>
     </header>
     <main class="w-full max-w-5xl">
-        <div class="flex justify-center space-x-4 mb-8">
-            <button id="randomButton" class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-[#D4EBF8] font-bold py-3 px-6 rounded-full shadow-lg transition-all">
+        <div class="button-container flex flex-col sm:flex-row sm:justify-center sm:space-x-4 mb-8">
+            <button id="randomButton" class="btn">
                 Show Random Characters
             </button>
-            <button id="randomDPButton" class="bg-gradient-to-r from-pink-400 to-purple-500 hover:from-pink-500 hover:to-purple-600 text-[#D4EBF8] font-bold py-3 px-6 rounded-full shadow-lg transition-all">
+            <button id="randomDPButton" class="btn">
                 Show Random Characters (Max DP 15)
             </button>
-            <!-- Reset Button -->
-            <button id="resetButton" class="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-[#D4EBF8] font-bold py-3 px-6 rounded-full shadow-lg transition-all">
+            <button id="resetButton" class="btn">
                 Reset
             </button>
         </div>
+        
         
         <ul id="characterList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <!-- Characters will be displayed here -->
